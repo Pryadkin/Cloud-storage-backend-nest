@@ -12,7 +12,6 @@ export class AuthController {
   @Post('login')
   @ApiBody({ type: CreateUserDto })
   async login(@Request() req) {
-    console.log('req', req);
     return req.user;
   }
 

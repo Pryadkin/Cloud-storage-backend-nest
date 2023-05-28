@@ -9,7 +9,7 @@ export class AuthService {
   async validateUser(email: string, password: string): Promise<any> {
     const user = await this.usersService.findByEmail(email);
 
-    if (user?.password !== password) {
+    if (user?.password === password) {
       const { password, ...result } = user;
       // TODO: Generate a JWT and return it here
       // instead of the user object
