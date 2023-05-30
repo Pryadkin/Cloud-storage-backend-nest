@@ -19,7 +19,7 @@ export class FileEntity {
   originalName: string;
 
   @Column()
-  size: string;
+  size: number;
 
   @Column()
   mimeType: string;
